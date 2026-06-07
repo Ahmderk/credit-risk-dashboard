@@ -1,0 +1,5 @@
+loan.csv
+credit_risk.db
+*.ipynb_checkpoints
+__pycache__/
+.DS_Store
