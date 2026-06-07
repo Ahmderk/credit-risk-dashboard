@@ -10,10 +10,8 @@ st.markdown("Built with LendingClub data · Random Forest model · AUC 0.70")
 
 @st.cache_data
 def load_data():
-    conn = sqlite3.connect("credit_risk.db")
-    df = pd.read_sql("SELECT * FROM loans_clean", conn)
-    conn.close()
-    return df
+    return pd.read_csv("loans_clean.csv")
+
 
 @st.cache_resource
 def load_model():
