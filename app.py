@@ -7,7 +7,7 @@ import plotly.express as px
 USD_TO_IDR = 16000
 
 st.set_page_config(page_title="Credit Risk Dashboard", layout="wide")
-st.title("Credit Risk — Loan Default Prediction")
+st.title("Credit Risk & Loan Default Prediction")
 st.markdown("Built with LendingClub data · Random Forest model · AUC 0.70")
 
 
