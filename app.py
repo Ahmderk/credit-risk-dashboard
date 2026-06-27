@@ -4,9 +4,12 @@ import sqlite3
 import joblib
 import plotly.express as px
 
+USD_TO_IDR = 16000
+
 st.set_page_config(page_title="Credit Risk Dashboard", layout="wide")
 st.title("Credit Risk — Loan Default Prediction")
 st.markdown("Built with LendingClub data · Random Forest model · AUC 0.70")
+
 
 @st.cache_data
 def load_data():
@@ -97,7 +100,7 @@ st.subheader("Predict default risk for a new applicant")
 c1, c2, c3 = st.columns(3)
 with c1:
     loan_amnt      = st.number_input("Loan amount (USD)", 1000, 40000, 10000, step=500)
-    int_rate       = st.slider("Interest rate (%)", 5.0, 30.0, 12.0, step=0.1)
+    int_rate       = st.slider("Interest rate (%)", 1.0, 30.0, 12.0, step=0.1)
     installment    = st.number_input("Monthly installment (USD)", 50, 1500, 300, step=10)
     annual_inc     = st.number_input("Annual income (USD)", 10000, 300000, 60000, step=1000)
 with c2:
